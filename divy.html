@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <button onclick="d1()" id="przycisk1">d1</button>
+    <button onclick="d2()" id="przycisk2">d2</button>
+    <button onclick="d3()" id="przycisk3">d3</button>
+    <div id="d1">d1</div>
+    <div id="d2">d2</div>
+    <div id="d3">d3</div>
+    <script>
+        function d1(){
+            document.getElementById("d1").style.display="block"
+            document.getElementById("d2").style.display="none"
+            document.getElementById("d3").style.display="none"
+        }
+        function d2(){
+            document.getElementById("d1").style.display="none"
+            document.getElementById("d2").style.display="block"
+            document.getElementById("d3").style.display="none"
+        }
+        function d3(){
+            document.getElementById("d1").style.display="none"
+            document.getElementById("d2").style.display="none"
+            document.getElementById("d3").style.display="block"
+        }
+    </script>
+</body>
+</html>

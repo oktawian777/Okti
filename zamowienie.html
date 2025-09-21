@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamówienie</title>
+</head>
+<body>
+    <h3>Zamówienie</h3>
+    Wybierz obraz:<input type="file" id="plik"></input>
+    <p>Liczba Kopii:<input type="number" id="kopia"></input></p>
+    <p><input type="radio" id="błyszcz" name="papier">Papier błyszczący</input></p>
+    <p><input type="radio" id="mat" name="papier">Papier matowy</input></p>
+    <button id="dodaj">Dodaj do koszyka</button>
+    <div id="div"></div>
+    <script>
+        let koszyk = document.getElementById("div")
+        document.getElementById("dodaj").addEventListener("click", function(){
+            let zdj = document.createElement("img")
+            zdj.src = URL.createObjectURL(document.getElementById("plik").files[0])
+            koszyk.appendChild(zdj)
+        })
+    </script>
+</body>
+</html>
