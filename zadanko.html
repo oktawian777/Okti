@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="zmienkolor()">Guzik 1</button>
+    <button onclick="dodaj()">Guzik 2</button>
+    <h3 id="text">jakiś text</h3>
+    <div id = "cos">
+
+        
+    </div>
+    <script>
+        function zmienkolor(){
+            document.querySelector("h3:last-child").style.color = "red";
+        }
+
+        function dodaj(){
+      const nowytext = document.createElement("h3");
+      nowytext.textContent = "jakiś text";
+      document.getElementById("cos").appendChild(nowytext);
+        }
+    </script>
+</body>
+</html>
